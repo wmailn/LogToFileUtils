@@ -48,8 +48,10 @@ public class FileLogUtils {
      * 为了衔接上文，日志超出设定大小后不会被直接删除，而是存储一个副本，所以实际占用空间是两份日志大小
      * <p>
      * 除了第一次超出大小后存为副本外，第二次及以后再次超出大小，则会覆盖副本文件，所以日志文件最多也只有两份
+     * <p>
+     * 默认10M
      */
-    private static final int LOG_MAX_SIZE = 1 * 1024 * 1024;
+    private static final int LOG_MAX_SIZE = 10 * 1024 * 1024;
     /**
      * 以调用者的类名作为TAG
      */
